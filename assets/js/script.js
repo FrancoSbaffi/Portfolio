@@ -11,6 +11,23 @@
  }
 bgAnimationItems();
 
+//ANIMATION
+
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll(".section");
+
+  function showSections(index) {
+    if (index < sections.length) {
+      setTimeout(function() {
+        sections[index].classList.add("show");
+        showSections(index + 1);
+      }, 300); 
+    }
+  }
+
+  showSections(0);
+});
+
 // DOCK
 
 const dockItems = document.querySelectorAll(".dock-item");
@@ -121,52 +138,6 @@ window.onmousemove = e => {
   }
 }
 
-// CARDS
-
-const contentWrMainElements = document.querySelectorAll(".content-wr-main");
-
-contentWrMainElements.forEach(contentWrMain => {
-
-  contentWrMain.onmousemove = e => {
-    const cards = contentWrMain.querySelectorAll(".card");
-    cards.forEach(card => {
-      const rect = card.getBoundingClientRect(),
-        x = e.clientX - rect.left,
-        y = e.clientY - rect.top;
-
-      card.style.setProperty("--mouse-x", `${x}px`);
-      card.style.setProperty("--mouse-y", `${y}px`);
-    });
-  };
-});
-
-const allArticles = document.getElementById("all-articles");
-
-allArticles.onmousemove = e => {
-  const rect = allArticles.getBoundingClientRect(),
-    x = e.clientX - rect.left;
-
-  allArticles.style.setProperty("--mouse-x", `${x}px`);
-};
-
-allArticles.onmouseleave = () => {
-  allArticles.style.setProperty("--mouse-x", `-100px`); 
-};
-
-const cloudEngineer = document.getElementById("cloud-engineer");
-
-cloudEngineer.onmousemove = e => {
-  const rect = cloudEngineer.getBoundingClientRect(),
-    x = e.clientX - rect.left;
-
-  cloudEngineer.style.setProperty("--mouse-x", `${x}px`);
-};
-
-cloudEngineer.onmouseleave = () => {
-  cloudEngineer.style.setProperty("--mouse-x", `-100px`);
-};
-
-
 // TOGGLE THEME
 
 const toggleThemeButton = document.getElementById("toggleThemeButton");
@@ -184,8 +155,7 @@ toggleThemeButton.addEventListener("click", () => {
   }
 });
 
-
-
+// CLOCK
 
 const timeArea = document.querySelector(".time");
 
@@ -224,6 +194,7 @@ const tik = () => {
 
 tik();
 
+// FILTER
 
  const filtro = document.getElementById('filtro');
  const nombres = document.getElementById('nombres');

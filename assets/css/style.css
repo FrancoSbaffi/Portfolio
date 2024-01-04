@@ -31,6 +31,7 @@
   --font-primary: "Plus Jakarta Sans", sans-serif;
   --font-secondary: "Newsreader", sans-serif;
   --font-third: "Geist Mono", sans-serif;
+  --font-fourth: "Georgia,sans-serif";
   --main-color: #573CFF;
   --second-color: #342499;
   --third-color: #231866;
@@ -80,7 +81,7 @@ body.dark {
   --fifth-color: #4f4b4b;
   --sixth-color: #2d2a2a61;
   --seventh-color: #c5bcbc81;
-  --yellow: #CCFF00;
+  --yellow: #FB48C4;
   --back: #ededed;
   --white: #1b1b1b;
   --gray: #ffffff;
@@ -139,6 +140,15 @@ body.dark .arrow-img {
 
 a {
   text-decoration: none;
+}
+
+.section {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.section.show {
+  opacity: 1;
 }
 
 .content-dock {
@@ -227,11 +237,11 @@ a {
   transition: 0.2s ease-out;
   border-radius: 50%;
   position: relative;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .link-hover:hover {
-  color: var(--fifth-color);
+  color: var(--white);
 }
 
 hr {
@@ -420,7 +430,7 @@ main {
   font-style: italic;
   padding-left: 2px;
   color: var(--white);
-  font-family: var(--font-secondary);
+  font-family: var(--font-fourth);
 }
 
 .link:hover {
@@ -506,13 +516,30 @@ main {
 .span-text {
   font-size: 15px;
   font-style: italic;
-  font-family: var(--font-secondary);
+  color: var(--white);
+  font-family: var(--font-fourth);
+}
+
+.span-text-1 {
+  font-weight: 500;
+  font-weight: 500;
+  color: var(--white);
+  font-style: italic;
+  font-family: var(--font-fourth);
+}
+
+.cloud-infra {
+  font-style: italic;
+  font-weight: 500;
+  font-family: var(--font-fourth);
+  color: var(--yellow);
+  text-decoration: underline;
 }
 
 .sub-title {
   color: var(--fifth-color);
   letter-spacing: 0.5px;
-  width: 50%;
+  width: 65%;
   font-family: var(--font-third);
   font-size: 15px;
 }
@@ -557,6 +584,7 @@ main {
 .project-link {
   color: var(--white);
   text-decoration: underline;
+  font-family: var(--font-fourth);
 }
 
 /* GRID TABLE */
@@ -652,7 +680,9 @@ h3 {
 .m-out {
   color: var(--white);
   font-size: 10px;
+  font-family: var(--font-fourth);
   letter-spacing: 1.1px;
+  font-style: italic;
 }
 
 .content-wr {
@@ -896,7 +926,7 @@ h2 {
 .country-flag {
   width: 45px;
   margin-right: 15px;
-  margin-bottom: -6px;
+  margin-bottom: -13px;
 }
 
 /* BACKGROUND ANIMATION EFFECT */

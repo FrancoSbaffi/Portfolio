@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franco Sbaffi - Blog</title>
+    <link rel="icon" href="../../img/Icon.svg" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const nav = document.querySelector(".nav");
+        const navItems = document.querySelector(".nav-items");
+        const navHome = document.querySelector(".nav-home");
+        const navTop = document.querySelector(".nav-top");
+        const icon = document.querySelector(".hamburguer i");
+      
+        let isOpen = false;
+      
+        gsap.set(nav, { height: "60px" });
+        gsap.set(navTop, { opacity: 0, scale: 0.9, display: "none" });
+        gsap.set(navItems, { opacity: 1, display: "flex" });
+        gsap.set(navHome, { flexGrow: 0 });
+      
+        navHome.addEventListener("click", function() {
+          if (!isOpen) {
+            gsap.to(nav, {
+              height: "370px",
+              duration: 0.75,
+              ease: "power4.inOut",
+              immediateRender: false,
+            });
+      
+            gsap.to(navTop, {
+              opacity: 1,
+              scale: 1,
+              duration: 0.3,
+              onStart: function() {
+                gsap.set(navTop, { display: "block" });
+              },
+              delay: 0.5,
+              immediateRender: false,
+            });
+      
+            gsap.to(navItems, {
+              opacity: 0,
+              duration: 0.1,
+              onComplete: function() {
+                gsap.set(navItems, { display: "none" });
+              },
+              immediateRender: false,
+            });
+      
+            gsap.to(navHome, {
+              flexGrow: 1,
+              duration: 0.2,
+              ease: "power4.inOut",
+              delay: 0,
+              immediateRender: false,
+              onComplete: function() {
+                icon.className = "ph-light ph-x";
+              },
+            });
+          } else {
+            gsap.to(nav, {
+              height: "60px",
+              duration: 0.75,
+              ease: "power4.inOut",
+              delay: 0.2,
+              immediateRender: false,
+            });
+      
+            gsap.to(navTop, {
+              opacity: 0,
+              scale: 0.9,
+              duration: 0.2,
+              onComplete: function() {
+                gsap.set(navTop, { display: "none" });
+              },
+              immediateRender: false,
+            });
+      
+            gsap.to(navHome, {
+              flexGrow: 0,
+              duration: 0.2,
+              ease: "power4.inOut",
+              immediateRender: false,
+              onComplete: function() {
+                icon.className = "ph-light ph-list";
+              },
+            });
+      
+            gsap.to(navItems, {
+              opacity: 1,
+              duration: 0.2,
+              onStart: function() {
+                gsap.set(navItems, { display: "flex" });
+              },
+              delay: 0.5,
+              immediateRender: false,
+            });
+          }
+          isOpen = !isOpen;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Bg Animation Effect Start -->
+    <div class="bg-animation-effect"></div>
+    <!-- Bg Animation Effect End -->
+
+    <!-- START NAVBAR -->
+
+    <nav class="navbar"></nav>
+
+        <!-- START NAVBAR -->
+
+        <nav class="navbar"></nav>
+        <div class="nav">
+          <div class="nav-top">
+            <div class="more-links">
+    
+              <div class="col">
+                <div class="col-title">
+                  <p>Projects</p> 
+                </div> 
+                <div class="link">
+                  <a href="#">EC2 Instance</a>
+                </div>
+                <div class="link">
+                  <a href="#">CI/CD on Tencent Cloud</a>
+                </div>
+                <div class="link">
+                  <a href="#">Advanced Services</a>
+                </div>
+              </div> 
+    
+              <div class="col">
+                <div class="col-title">
+                  <p>Contact</p> 
+                </div> 
+                <div class="link">
+                  <a href="https://www.linkedin.com/in/franco-sbaffi/" target="_blank">Linkedin</a>
+                </div>
+                <div class="link">
+                  <a href="mailto:sbaffids@gmail.com">Mail</a>
+                </div>
+                <div class="link">
+                  <a href="https://twitter.com/franrzsa" target="_blank">Twitter</a>
+                </div>
+              </div> 
+    
+             
+            </div> 
+          </div> 
+          <div class="nav-bottom">
+            <div class="nav-home">
+              <div class="nav-item" id="toggle">
+                <div class="hamburguer">
+                  <i class="ph-light ph-list"></i>
+                </div> 
+                <p>More</p>
+              </div> 
+            </div>
+            <div class="nav-items">
+              <div class="nav-item">
+                <a href="../../../index.html">Home</a>
+              </div>
+              <div class="nav-item">
+                <a href="blog.html">Writings</a>
+              </div>
+              <div class="nav-item">
+                <div class="containerM">
+                  <canvas id="myCanvas"></canvas>
+                </div>
+                <audio src="../../img/song.mp3" id="audio"></audio>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- MUSIC -->
+         <script>
+          const c = document.getElementById("myCanvas");
+          const audio = document.querySelector("#audio");
+
+          const colorBlanco = getComputedStyle(document.documentElement).getPropertyValue('--stroke');
+
+          audio.volume = 0.03;
+
+          let opt = {
+            width: c.offsetWidth,
+            height: c.offsetHeight,
+            midY: c.offsetHeight / 2,
+            points: 80,
+            stretch: 10,
+            sinHeight: 0,
+            speed: -0.1,
+            strokeColor: colorBlanco,
+            strokeWidth: 1.5,
+            power: false,
+          };
+          
+          c.width = opt.width * 2;
+          c.height = opt.height * 2;
+          c.style.width = opt.width + "px";
+          c.style.height = opt.height + "px";
+      
+          const ctx = c.getContext("2d");
+          ctx.scale(2, 2);
+      
+          ctx.strokeStyle = opt.strokeColor;
+          ctx.lineWidth = opt.strokeWidth;
+          ctx.lineCap = "round";
+          ctx.lineJoin = "round";
+      
+          let time = 0;
+      
+          const render = () => {
+            window.requestAnimationFrame(render);
+            ctx.clearRect(0, 0, opt.width, opt.height);
+            time += 1;
+            ctx.beginPath();
+            let increment = 0;
+
+
+            for (let i = 0; i <= opt.points; i++) {
+              if (i < opt.points / 2) {
+                increment += 0.1;
+              } else {
+                increment += -0.1;
+              }
+      
+              const x = (opt.width / opt.points) * i;
+              const y =
+                opt.midY +
+                Math.sin(time * opt.speed + (i / opt.stretch)) * opt.sinHeight * increment;
+              ctx.lineTo(x, y);
+            }
+      
+            ctx.stroke();
+          };
+      
+          render();
+      
+          c.addEventListener("click", () => {
+            opt.power = !opt.power;
+      
+            if (opt.power) {
+              audio.play();
+              TweenMax.to(opt, 1, {
+                sinHeight: 4,
+                stretch: 5,
+                ease: Power2.easeInOut,
+              });
+            } else {
+              audio.pause();
+              TweenMax.to(opt, 1, {
+                sinHeight: 0,
+                stretch: 10,
+                ease: Power3.easeOut,
+              });
+            }
+          });
+        </script>
+      <!-- END MUSIC -->
+    <!-- END NAVBAR -->
+
+    <main class="container">
+      <article class="sec-padding">
+        <div class="arrow-back">
+          <img src="../../img/arrow-back.svg" alt="" class="arrow-img" />
+          <a href="#" class="btn link">Toggle Theme </a>
+        </div>
+        <h1 class="title-blog">
+            Writing about Cloud Computing & DevOps, Important News from the IT world and Hobbies.
+        </h1>
+        <p class="sub-title">
+            When I'm not working you can find me writing about Cloud here, currently I've written a couple of articles. If you want to know more about me, check out my <a href="https://www.linkedin.com/in/franco-sbaffi/" class="project-link btn link">LinkedIn profile</a>
+        </p>
+        <input class="input-pr" id="filtro" type="text" placeholder="Search article by title or topic.">
+        <div id="nombres">
+            <a href="articles/cloudArchitecture.html">
+                <div class="content-wr" id="nombres">
+                    <h3 class="title-wr"><img class="country-flag" src="../../img/flag/CloudEmoji.png" alt="">Cloud Architecture</h3>
+                    <p class="sub-title-wr">This blog explores the essence of cloud architecture and its critical role in creating scalable, secure, and efficient digital systems. Find out how cloud architecture is shaping the future of technology and business.</p>
+                    <p class="read">Read article</p>
+                </div>
+            </a>
+            <a href="articles/cloudSecurity.html">
+              <div class="content-wr" id="nombres">
+                  <h3 class="title-wr"><img class="country-flag" src="../../img/flag/Security.png" alt="">Cloud Security</h3>
+                  <p class="sub-title-wr">Cloud security has become a critical priority in today's digital world. This blog explores key cloud security challenges and solutions, highlighting the importance of keeping our data and systems protected in a constantly evolving environment.</p> 
+                  <p class="read">Read article</p>
+              </div>
+          </a>
+            <a href="articles/cloudTrends.html">
+              <div class="content-wr" id="nombres">
+                  <h3 class="title-wr"><img class="country-flag" src="../../img/flag/Trends.png" alt="">Trends in Cloud Computing (2024)</h3>
+                  <p class="sub-title-wr">Discover the trends that are redefining the future of cloud technology. From AI to advanced security, cloud computing promises an exciting world of technology.</p> 
+                  <p class="read">Read article</p>
+              </div>
+          </a>
+          <a href="articles/cloudEdge.html">
+            <div class="content-wr" id="nombres">
+                <h3 class="title-wr"><img class="country-flag" src="../../img/flag/Laptop.png" alt="">Edge Computing</h3>
+                <p class="sub-title-wr">Find out how Edge Computing is transforming the way we process data and applications by bringing computing power closer to the point of action. We will explore why this trend is crucial to the future of technology and how it is driving innovation in various sectors.</p> 
+                <p class="read">Read article</p>
+            </div>
+          </a>
+          <a href="articles/cloudContainer.html">
+            <div class="content-wr" id="nombres">
+                <h3 class="title-wr"><img class="country-flag" src="../../img/flag/Container.png" alt=""> Orchestration & Containers</h3>
+                <p class="sub-title-wr">Explore how container orchestration is revolutionizing cloud application management. Find out why these technologies are essential for scalability, efficiency, and agility in the world of cloud computing, and how they are shaping the future of cloud engineering.</p> 
+                <p class="read">Read article</p>
+            </div>
+          </a>
+        </div>
+      </article>
+    </main>
+
+    <!-- START CLOCK -->
+    <div class="container timer">
+      <div class="time">12:05:32</div>
+      <div class="time-per">am</div>
+      <div class="ubication_ar">Buenos Aires</div>
+    </div>
+    <!-- END CLOCK -->
+
+    <script src="../../js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franco Sbaffi - Cloud Security</title>
+    <link rel="icon" href="../../../img/Icon.svg" />
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const nav = document.querySelector(".nav");
+        const navItems = document.querySelector(".nav-items");
+        const navHome = document.querySelector(".nav-home");
+        const navTop = document.querySelector(".nav-top");
+        const icon = document.querySelector(".hamburguer i");
+      
+        let isOpen = false;
+      
+        gsap.set(nav, { height: "60px" });
+        gsap.set(navTop, { opacity: 0, scale: 0.9, display: "none" });
+        gsap.set(navItems, { opacity: 1, display: "flex" });
+        gsap.set(navHome, { flexGrow: 0 });
+      
+        navHome.addEventListener("click", function() {
+          if (!isOpen) {
+            gsap.to(nav, {
+              height: "370px",
+              duration: 0.75,
+              ease: "power4.inOut",
+              immediateRender: false,
+            });
+      
+            gsap.to(navTop, {
+              opacity: 1,
+              scale: 1,
+              duration: 0.3,
+              onStart: function() {
+                gsap.set(navTop, { display: "block" });
+              },
+              delay: 0.5,
+              immediateRender: false,
+            });
+      
+            gsap.to(navItems, {
+              opacity: 0,
+              duration: 0.1,
+              onComplete: function() {
+                gsap.set(navItems, { display: "none" });
+              },
+              immediateRender: false,
+            });
+      
+            gsap.to(navHome, {
+              flexGrow: 1,
+              duration: 0.2,
+              ease: "power4.inOut",
+              delay: 0,
+              immediateRender: false,
+              onComplete: function() {
+                icon.className = "ph-light ph-x";
+              },
+            });
+          } else {
+            gsap.to(nav, {
+              height: "60px",
+              duration: 0.75,
+              ease: "power4.inOut",
+              delay: 0.2,
+              immediateRender: false,
+            });
+      
+            gsap.to(navTop, {
+              opacity: 0,
+              scale: 0.9,
+              duration: 0.2,
+              onComplete: function() {
+                gsap.set(navTop, { display: "none" });
+              },
+              immediateRender: false,
+            });
+      
+            gsap.to(navHome, {
+              flexGrow: 0,
+              duration: 0.2,
+              ease: "power4.inOut",
+              immediateRender: false,
+              onComplete: function() {
+                icon.className = "ph-light ph-list";
+              },
+            });
+      
+            gsap.to(navItems, {
+              opacity: 1,
+              duration: 0.2,
+              onStart: function() {
+                gsap.set(navItems, { display: "flex" });
+              },
+              delay: 0.5,
+              immediateRender: false,
+            });
+          }
+          isOpen = !isOpen;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="bg-animation-effect"></div>
+
+    <nav class="navbar"></nav>
+
+    <nav class="navbar"></nav>
+    <div class="nav">
+      <div class="nav-top">
+        <div class="more-links">
+          
+
+          <div class="col">
+            <div class="col-title">
+              <p>Projects</p> 
+            </div> 
+            <div class="link">
+              <a href="#">EC2 Instance</a>
+            </div>
+            <div class="link">
+              <a href="#">CI/CD on Tencent Cloud</a>
+            </div>
+            <div class="link">
+              <a href="#">Advanced Services</a>
+            </div>
+          </div> 
+
+          <div class="col">
+            <div class="col-title">
+              <p>Contact</p> 
+            </div> 
+            <div class="link">
+              <a href="https://www.linkedin.com/in/franco-sbaffi/" target="_blank">Linkedin</a>
+            </div>
+            <div class="link">
+              <a href="mailto:sbaffids@gmail.com">Mail</a>
+            </div>
+            <div class="link">
+              <a href="https://twitter.com/franrzsa" target="_blank">Twitter</a>
+            </div>
+          </div> 
+
+         
+        </div> 
+      </div> 
+      <div class="nav-bottom">
+        <div class="nav-home">
+          <div class="nav-item" id="toggle">
+            <div class="hamburguer">
+              <i class="ph-light ph-list"></i>
+            </div> 
+            <p>More</p>
+          </div> 
+        </div>
+        <div class="nav-items">
+          <div class="nav-item">
+            <a href="../../../../index.html">Home</a>
+          </div>
+          <div class="nav-item">
+            <a href="../blog.html">Writings</a>
+          </div>
+          <div class="nav-item">
+            <div class="containerM">
+              <canvas id="myCanvas"></canvas>
+            </div>
+            <audio src="../../../img/song.mp3" id="audio"></audio>
+          </div>
+         </div>
+       </div>
+     </div>
+     
+     <script>
+      const c = document.getElementById("myCanvas");
+      const audio = document.querySelector("#audio");
+
+      const colorBlanco = getComputedStyle(document.documentElement).getPropertyValue('--stroke');
+
+      audio.volume = 0.03;
+
+      let opt = {
+        width: c.offsetWidth,
+        height: c.offsetHeight,
+        midY: c.offsetHeight / 2,
+        points: 80,
+        stretch: 10,
+        sinHeight: 0,
+        speed: -0.1,
+        strokeColor: colorBlanco,
+        strokeWidth: 1.5,
+        power: false,
+      };
+      
+      c.width = opt.width * 2;
+      c.height = opt.height * 2;
+      c.style.width = opt.width + "px";
+      c.style.height = opt.height + "px";
+  
+      const ctx = c.getContext("2d");
+      ctx.scale(2, 2);
+  
+      ctx.strokeStyle = opt.strokeColor;
+      ctx.lineWidth = opt.strokeWidth;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+  
+      let time = 0;
+  
+      const render = () => {
+        window.requestAnimationFrame(render);
+        ctx.clearRect(0, 0, opt.width, opt.height);
+        time += 1;
+        ctx.beginPath();
+        let increment = 0;
+
+
+        for (let i = 0; i <= opt.points; i++) {
+          if (i < opt.points / 2) {
+            increment += 0.1;
+          } else {
+            increment += -0.1;
+          }
+  
+          const x = (opt.width / opt.points) * i;
+          const y =
+            opt.midY +
+            Math.sin(time * opt.speed + (i / opt.stretch)) * opt.sinHeight * increment;
+          ctx.lineTo(x, y);
+        }
+  
+        ctx.stroke();
+      };
+  
+      render();
+  
+      c.addEventListener("click", () => {
+        opt.power = !opt.power;
+  
+        if (opt.power) {
+          audio.play();
+          TweenMax.to(opt, 1, {
+            sinHeight: 4,
+            stretch: 5,
+            ease: Power2.easeInOut,
+          });
+        } else {
+          audio.pause();
+          TweenMax.to(opt, 1, {
+            sinHeight: 0,
+            stretch: 10,
+            ease: Power3.easeOut,
+          });
+        }
+      });
+    </script>
+
+    <main class="container">
+      <article class="sec-padding">
+        <div class="arrow-back">
+          <img class="arrow-img" src="../../../img/arrow-back.svg" alt="arrow" />
+          <a class="btn link" href="#">Toggle Theme</a>
+        </div>
+        <img class="country-flag" src="../../../img/flag/Security.png" alt="">
+        <h1 class="title1">Securing the Cloud: Best Practices for Cloud Engineers</h1>
+        <p class="sub-title">In an era where data is king and businesses rely heavily on cloud services, ensuring the security of cloud environments has become paramount. As a Cloud Engineer, your role in safeguarding these digital landscapes is crucial. In this article, we will explore essential practices to bolster cloud security and protect against evolving threats.</p>
+        <div class="img-blog">
+          <img class="img-blog1" src="../../../img/video/SecurityCloudBlog.jpg" alt="">
+        </div>
+
+        <h2 class="sub-title">The Cloud Security Landscape</h2>
+        <p class="sub-title">Cloud security is a multifaceted domain that encompasses various aspects, including data protection, identity and access management, network security, and compliance. Here are some key considerations for cloud security:</p>
+        <br>
+
+        <p class="sub-title">
+          <span class="yellow-point">1.</span><b> Identity and Access Management (IAM)</b>:<span> IAM is the cornerstone of cloud security. Ensure that users and applications have the appropriate permissions and that the principle of least privilege is followed. Implement strong authentication methods like multi-factor authentication (MFA) to enhance account security.
+        </p>
+        <p class="sub-title">
+          <span class="yellow-point">2.</span><b> Encryption</b>:<span> Encrypt data both in transit and at rest. Leverage encryption services provided by your cloud provider, such as AWS Key Management Service (KMS) or Azure Key Vault. Use secure key management practices.
+        </p>
+        <p class="sub-title">
+          <span class="yellow-point">3.</span><b> Network Security</b>:<span> Implement robust network security measures, including firewalls, intrusion detection, and prevention systems (IDPS), and virtual private clouds (VPCs). Employ network segmentation to limit lateral movement in case of a breach.
+        </p>
+        <p class="sub-title">
+          <span class="yellow-point">4.</span><b> Monitoring and Logging</b>:<span> Set up comprehensive monitoring and logging solutions. Use cloud-native tools like AWS CloudWatch, Azure Monitor, or Google Cloud Logging to track activities, detect anomalies, and respond swiftly to security incidents.
+        </p>
+        <p class="sub-title">
+          <span class="yellow-point">5.</span><b> Patch Management</b>:<span> Keep your cloud resources up to date by applying security patches regularly. Automate patch management where possible to reduce vulnerabilities.
+        </p>
+        <p class="sub-title">
+          <span class="yellow-point">6.</span><b> Compliance and Auditing</b>:<span> Familiarize yourself with industry-specific regulations (e.g., GDPR, HIPAA) and ensure your cloud environment complies with them. Conduct regular security audits and assessments.
+        </p>
+        <br>
+
+        <h2 class="sub-title">Best Practices for Cloud Security</h2>
+        <p class="sub-title">
+          <span class="yellow-point">1.</span><b> Shared Responsibility Model</b>:<span> Understand your cloud provider's shared responsibility model. While they secure the infrastructure, you are responsible for securing your data and configurations.
+        </p>
+        <p class="sub-title">
+          <span class="yellow-point">2.</span><b> Security by Design</b>:<span> Embed security practices into your architecture from the outset. Perform security assessments during the design phase to identify and address potential vulnerabilities.
+        </p>
+        <p class="sub-title">
+          <span class="yellow-point">3.</span><b> Automate Security</b>:<span> Use Infrastructure as Code (IaC) and automated deployment pipelines to consistently and securely provision resources. Automated security scans can help identify issues early in the development process.
+        </p>
+        <p class="sub-title">
+          <span class="yellow-point">4.</span><b> Incident Response Plan</b>:<span> Develop an incident response plan that outlines how your team will respond to security incidents. Ensure all team members are familiar with this plan and conduct regular drills.
+        </p>
+        <p class="sub-title">
+          <span class="yellow-point">5.</span><b> Employee Training</b>:<span> Invest in training and awareness programs for your team. Security is a shared responsibility, and educated team members are your first line of defense.
+        </p>     
+        <p class="sub-title">
+          <span class="yellow-point">6.</span><b> Stay Informed</b>:<span> Keep up with the latest security threats and vulnerabilities. Subscribe to security newsletters, participate in security forums, and follow industry best practices.
+        </p> 
+        <div class="post-content ">
+          <h2 class="sub-title">Best Practices for Cloud Security</h2>
+          <p class="sub-title">As a Cloud Engineer, your role is pivotal in maintaining the security of cloud environments. By implementing robust security measures, following best practices, and staying vigilant against emerging threats, you can help safeguard critical data and systems in the cloud.</p>   
+        <p class="sub-title">Remember, cloud security is an ongoing journey. Continuously assess, adapt, and improve your security posture to stay one step ahead of cyber threats. In doing so, you not only protect your organization but also enhance your reputation as a skilled and responsible Cloud Engineer.</p>
+        </div>
+      </article>
+    </main>
+
+
+    <div class="container timer">
+      <div class="time">12:05:32</div>
+      <div class="time-per">am</div>
+      <div class="ubication_ar">Buenos Aires, AR</div>
+    </div>
+ 
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

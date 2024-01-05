@@ -1,12 +1,105 @@
 
 .img-large {
-  position: relative; 
   width: 100%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row; 
 }
 
 .about-name {
   color: var(--white);
   font-family: var(--font-primary);
-  font-size: 100px;
-  font-weight: 600;
+  font-size: 125px;
+  font-weight: 700;
+}
+
+.desc-about {
+  color: var(--fifth-color);
+  font-size: 15px;
+  font-family: var(--font-primary);
+  margin-left: 90px; 
+  text-align: initial;
+}
+
+.about-sub {
+  color: var(--fifth-color);
+  font-family: var(--font-primary);
+  font-size: 11px;
+  margin-top: 15px;
+  margin-bottom: 105px;
+  width: 10%;
+  font-weight: 800;
+}
+
+.about-des {
+  color: var(--white);
+  font-family: var(--font-primary);
+  margin-left: 90px; 
+  width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+  letter-spacing: 1.2px;
+}
+
+.point-about {
+  color: var(--fifth-color);
+}
+
+.about-sub-ex{
+  color: var(--fifth-color);
+  font-family: var(--font-primary);
+  font-size: 11px;
+  margin-top: 15px;
+  margin-bottom: 200px;
+  width: 10%;
+  font-weight: 800;
+}
+
+.kai-picture {
+  border-radius: 50%;
+  width: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.kai-job {
+  font-size: 13px;
+  color: var(--fifth-color);
+}
+
+.testimonial {
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .about-name{
+    font-size: 95px;
+  }
+
+  .desc-about {
+    margin-left: 0; 
+    margin-top: 10px; 
+  }
+  .about-sub{
+    width: 20%;
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
+  .about-des {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .about-sub-ex{
+    width: 20%;
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
 }

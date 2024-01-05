@@ -25,6 +25,14 @@
   src: url(../font/Geist-UltraLight.woff2);
 }
 
+@font-face {
+  font-family: "Georgia,sans-serif";
+  src: url(../font/georgia.woff);
+  src: url(../font/georgiab.woff);
+  src: url(../font/georgiai.woff);
+  src: url(../font/georgiaz.woff);
+}
+
 /* VARIABLES */
 
 :root {
@@ -45,6 +53,7 @@
   --gray: #ffffff;
   --black: #1b1b1b;
   --black-option: #31313173;
+  --hover-wr: #2d2a2a73;
   --blur: rgba(160, 160, 170, 0.2);
   --back-blur: #0000001f;
   --bg: #232323;
@@ -87,6 +96,7 @@ body.dark {
   --gray: #ffffff;
   --black: #;
   --black-option: #e5dada73;
+  --hover-wr: #bfaeae73;
   --blur: rgba(160, 160, 170, 0.2);
   --back-blur: #937f7f33;
   --bg: #f1ecec;
@@ -685,104 +695,99 @@ h3 {
   font-style: italic;
 }
 
-.content-wr {
-  position: static;
-  margin-top: 35px;
-  padding: 25px;
-  border-radius: 8px;
-  transition: 0.2s;
-  background-color: var(--back-blur);
-  backdrop-filter: blur(5px);
-  border: 1.5px solid var(--back-blur);
-}
-
-#cards:hover > .card::after {
-  opacity: 1;
-}
-
-.card {
-  border-radius: 10px;
-  cursor: pointer;
+.angry-grid {
   display: flex;
-  flex-direction: column;
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px 20px;
 }
 
-.card:hover::before {
-  opacity: 1;
-}
-
-.card::before,
-.card::after {
-  border-radius: inherit;
-  content: "";
-  height: 100%;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  transition: opacity 500ms;
+.content-wr {
+  display: flex;
   width: 100%;
 }
 
-.card::before {
-  background: radial-gradient(
-    400px circle at var(--mouse-x) var(--mouse-y), 
-    var(--blur),
-    transparent 40%
-  );
-  z-index: 3;
+.left-column {
+  width: 20%;
+  margin-right: 40px;
 }
 
-.card::after {  
-  background: radial-gradient(
-    600px circle at var(--mouse-x) var(--mouse-y), 
-    var(--black-option),
-    transparent 40%
-  );
-  z-index: 1;
+.column-right-wr {
+  width: 80%;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.2s;
 }
 
-.card > .card-content {
-  background-color: var(--card-color);
-  border-radius: inherit;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  inset: 1px;
-  z-index: 2;
-}
-
-.content-wr-main {
-  background-position: 0% 0%;
-  background-size: 5vmin 5vmin;
-  height: calc(100% - 10vmin);
-  position: relative;
-  transition: background-position 350ms ease;
-  z-index: 2;
+.column-right-wr:hover {
+  background-color: var(--back);
 }
 
 .date-wr {
   font-size: 13px;
-  font-family: var(--font-primary);
+  font-family: var(--font-third);
   color: var(--white);
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .title-wr {
   font-size: 20px;
-  margin-top: 8px;
   font-family: var(--font-primary);
   color: var(--white);
+  font-weight: 500;
 }
 
-.sub-title-wr {
-  margin-top: 8px;
+.desc-wr {
   font-size: 15px;
-  font-family: var(--font-primary);
+  font-family: var(--font-third);
   color: var(--fifth-color);
-  padding-bottom: 10px;
-  padding-top: 10px;
+}
+
+.img-wr {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.link-to-wr {
+  color: var(--white);
+  font-family: var(--font-primary);
+}
+
+.all-wr-content{
+  background-color: var(--back);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 50px;
+  transition: all 0.3s;
+}
+
+.all-wr-content:hover{
+  background-color: var(--hover-wr);
+}
+
+@media screen and (max-width: 768px) {
+  .content-wr {
+    flex-direction: column; 
+  }
+
+  .left-column {
+    width: 100%;
+    margin-bottom: 20px; 
+  }
+
+  .column-right-wr {
+    width: 100%;
+    padding: 12px;
+    text-align: left;
+  }
+
+  .date-wr {
+    margin-bottom: 10px; 
+  }
 }
 
 .hash {
@@ -790,14 +795,6 @@ h3 {
   font-family: var(--font-primary);
   font-size: 12px;
   margin-top: 8px;
-}
-
-.read {
-  color: var(--white);
-  font-family: var(--font-primary);
-  font-size: 13.5px;
-  margin-top: 10px;
-  letter-spacing: 1px;
 }
 
 .barra-blanca {

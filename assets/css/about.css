@@ -1,0 +1,12 @@
+
+.img-large {
+  position: relative; 
+  width: 100%;
+}
+
+.about-name {
+  color: var(--white);
+  font-family: var(--font-primary);
+  font-size: 100px;
+  font-weight: 600;
+}

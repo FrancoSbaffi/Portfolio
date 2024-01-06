@@ -198,21 +198,22 @@ tik();
 
 // FILTER
 
- const filtro = document.getElementById('filtro');
- const nombres = document.getElementById('nombres');
+document.addEventListener('DOMContentLoaded', () => {
+  const tags = document.querySelectorAll('.tags button');
+  const posts = document.querySelectorAll('.blog-post .post');
 
-
- filtro.addEventListener('input', () => {
-   const textoFiltro = filtro.value.toLowerCase();
-   const divsNombres = nombres.querySelectorAll('div');
-
-   
-   divsNombres.forEach(divNombre => {
-     const textoDiv = divNombre.innerText.toLowerCase();
-     if (textoDiv.includes(textoFiltro)) {
-       divNombre.style.display = 'block';
-     } else {
-       divNombre.style.display = 'none';
-     }
-   });
- });
+  tags.forEach(tag => {
+    tag.addEventListener('click', () => {
+      const filter = tag.getAttribute('data-filter');
+      
+      posts.forEach(post => {
+        const postTags = post.getAttribute('data-tags');
+        if (filter === 'all' || postTags.includes(filter)) {
+          post.classList.remove('hidden');
+        } else {
+          post.classList.add('hidden');
+        }
+      });
+    });
+  });
+});

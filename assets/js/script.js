@@ -217,3 +217,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+// BLOG SCROLL
+
+document.querySelectorAll('.navigation').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('data-target');
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// SCROLL TO TOP
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+window.onscroll = function() {
+  const btnToTop = document.getElementById("btnToTop");
+
+  if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+    btnToTop.style.display = "block";
+  } else {
+    btnToTop.style.display = "none";
+  }
+};

@@ -79,6 +79,7 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-family: "Newsreader", serif;
   transition: background-color 0.15s ease, color 0.15s ease;
+  overflow-x: hidden;
 }
 
 body.dark {
@@ -1141,6 +1142,70 @@ h2 {
   font-weight: 600;
   color: var(--white);
   background-color: var(--back-blur);
+}
+
+.coding {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow-y: auto;
+  background-color: var(--back-blur);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid var(--back-blur);
+  font-family: var(--font-third);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+pre {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 300;
+  white-space: pre-wrap;
+  margin-left: -100px;
+}
+
+code {
+  text-align: left;
+}
+
+.copy-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1.5px solid var(--back-blur); 
+  font-family: var(--font-third);
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--back-blur);
+  transition: 0.2s ease-in-out;
+}
+
+.copy-button:hover {
+  background-color: var(--black-option);
+}
+
+.copy-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--color-about);
+  color: var(--white);
+  font-family: var(--font-primary);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.video-wr {
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 /* QUERIES BLOG */

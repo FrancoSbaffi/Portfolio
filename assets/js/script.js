@@ -252,3 +252,56 @@ window.onscroll = function() {
     btnToTop.style.display = "none";
   }
 };
+
+// COPY CODE
+
+document.addEventListener('DOMContentLoaded', function() {
+  const copyButton = document.querySelector('.copy-button');
+  const codeSnippet = document.querySelector('.coding code');
+
+  copyButton.addEventListener('click', function() {
+      const textArea = document.createElement('textarea');
+      textArea.value = codeSnippet.textContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+  });
+});
+
+const copyButtons = document.querySelectorAll('.copy-button');
+
+copyButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    copyCode(index);
+  });
+});
+
+function copyCode(index) {
+  const codeBlocks = document.querySelectorAll('.coding pre code');
+  const codeToCopy = codeBlocks[index].textContent.trim();
+
+  const copyMessage = document.querySelectorAll('.copy-message')[index];
+
+  const range = document.createRange();
+  range.selectNode(codeBlocks[index]);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+
+  try {
+    const successful = document.execCommand('copy');
+    if (successful) {
+      copyMessage.style.display = 'block';
+      setTimeout(() => {
+        copyMessage.style.display = 'none';
+      }, 2000);
+    }
+  } catch (err) {
+    console.error('Could not copy text', err);
+  }
+
+  window.getSelection().removeAllRanges();
+}
+
+
+

@@ -142,9 +142,18 @@ window.onmousemove = e => {
 
 // TOGGLE THEME
 
+function setTheme() {
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme) {
+    document.body.classList.add(currentTheme);
+  }
+}
+
 const toggleThemeButton = document.getElementById("toggleThemeButton");
 
-toggleThemeButton.addEventListener("click", () => {
+toggleThemeButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  
   document.body.classList.toggle("dark");
 
   const icon = toggleThemeButton.querySelector("ion-icon");
@@ -156,6 +165,7 @@ toggleThemeButton.addEventListener("click", () => {
     icon.setAttribute("name", "moon-sharp");
   }
 });
+
 
 // CLOCK
 
@@ -302,6 +312,4 @@ function copyCode(index) {
 
   window.getSelection().removeAllRanges();
 }
-
-
 

@@ -1208,11 +1208,21 @@ code {
   border-radius: 8px;
 }
 
+.ui-links {
+  color: var(--color-about);
+  font-family: var(--font-fourth);
+  transition: 0.2s ease-in-out;
+}
+
+.ui-links:hover {
+  color: var(--fifth-color);
+}
+
 /* QUERIES BLOG */
 
 @media (max-width: 570px) {
   .title-blog {
-    font-size: 50px;
+    font-size: 45px;
   }
 }
 
@@ -1226,10 +1236,19 @@ code {
   .img-written {
     width: 40px;
   }
+  .title-section-blog {
+    font-size: 45px;
+  }
 }
 
 @media (max-width: 375px) {
   .date-blog {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .title-section-blog {
+    font-size: 40px;
   }
 }

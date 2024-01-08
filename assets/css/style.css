@@ -229,6 +229,23 @@ a {
   opacity: 1;
 }
 
+@media screen and (max-width: 330px) {
+  .content-dock {
+    top: 95%;
+  }
+
+  .dock-item {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .dock-item-name {
+    font-size: 8px;
+    top: -20px;
+  }
+}
+
 .container {
   max-width: 850px;
   margin: 0 auto;

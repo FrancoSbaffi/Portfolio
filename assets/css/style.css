@@ -1298,7 +1298,6 @@ code {
   background-color: var(--black);
   border: 1.5px solid var(--line-about);
   border-radius: 5px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1348,6 +1347,16 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem; 
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 1px, 
+    transparent 1px
+  );
+  background-position: 50% 50%;
+  background-size: 1.1rem 1.1rem;
+  padding: 1rem; 
+  border-radius: 1.25rem;
+  overflow: hidden;
 }
 
 .card-image {

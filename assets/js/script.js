@@ -100,6 +100,7 @@ document.querySelector(".dock").addEventListener("mouseleave", () => {
 
 
 // CURSOR
+
 const trailer = document.getElementById("trailer");
 
 const animateTrailer = (e, interacting) => {
@@ -272,4 +273,8 @@ function copyCode(index) {
 
   window.getSelection().removeAllRanges();
 }
+
+// CARDS
+
+
 

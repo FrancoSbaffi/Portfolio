@@ -30,6 +30,11 @@ document.addEventListener("DOMContentLoaded", function() {
   showSections(0);
 });
 
+// 3D
+
+
+
+
 // DOCK
 
 const dockItems = document.querySelectorAll(".dock-item");
@@ -49,7 +54,6 @@ const updateDockItems = () => {
     const isHovered = item.classList.contains("hovered");
     const isNeighbor = item.classList.contains("neighbor");
 
-
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
     if (!isMobile) {
@@ -62,11 +66,11 @@ const updateDockItems = () => {
       }
     }
 
+    item.style.transition = "transform 0.3s ease-in-out, margin 0.3s ease-in-out";
     item.style.transform = `scale(${scale})`;
     item.style.margin = `0 ${margin}`;
   });
 };
-
 
 window.addEventListener("resize", updateDockItems);
 updateDockItems();
@@ -274,7 +278,19 @@ function copyCode(index) {
   window.getSelection().removeAllRanges();
 }
 
-// CARDS
+// WRITINGS
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

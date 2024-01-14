@@ -433,6 +433,11 @@ i {
 
 /* END NAV */
 
+.img-content {
+  margin-top: 20px;
+  margin-bottom: 20px; 
+}
+
 .img-me{
   width: 75px;
   border-radius: 50%;
@@ -483,10 +488,6 @@ main {
   background-color: var(--background-animated);
   border-radius: 3px;
   padding: 1px;
-}
-
-.img-content {
-  margin-bottom: 25px;
 }
 
 .profile-img {
@@ -1416,3 +1417,4 @@ code {
     font-size: 15px;
   }
 }
+

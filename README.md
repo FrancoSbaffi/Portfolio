@@ -4,9 +4,9 @@
 
 </div>
 
-<h3 align="center" style="margin-bottom: 0; font-size: 50px;">
+<h2 align="center" style="margin-bottom: 0; font-size: 50px;">
   Franco Sbaffi &copy;
-</h3>
+</h2>
 
 <br>
 <p align="center">

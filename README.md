@@ -31,3 +31,6 @@
   - [**Geist**](https://vercel.com/font)
   - [**Georgia**](https://www.myfonts.com/collections/georgia-font-microsoft-corporation)
 
+##  License
+
+[MIT](#) - Created by [**midu.dev**](https://midu.dev).

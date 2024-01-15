@@ -8,6 +8,6 @@
   Franco Sbaffi &copy;
 </h1>
 
-<p>
+<p align="center">
   Personal Porfolio 2024
 </p>

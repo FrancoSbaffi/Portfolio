@@ -4,7 +4,7 @@
 
 </div>
 
-<h1 align="center">
+<h1 align="center" style="margin-bottom: 0;">
   Franco Sbaffi &copy;
 </h1>
 

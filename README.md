@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/FrancoSbaffi/Portfolio/assets/99909205/0eb8b6a6-8b09-4987-9a63-25afea91642a
+<img src="https://github.com/FrancoSbaffi/Portfolio/assets/icons.svg
 " height="50px" width="auto" /> 
 <h3>
  The ESLAND page reimagined

@@ -1,5 +1,6 @@
 <div align="center">
-<img src="/assets/icon.svg" height="50px" width="auto" /> 
+<img src="![icon](https://github.com/FrancoSbaffi/Portfolio/assets/99909205/0eb8b6a6-8b09-4987-9a63-25afea91642a)
+" height="50px" width="auto" /> 
 <h3>
  The ESLAND page reimagined
 </h3>

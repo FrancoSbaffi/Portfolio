@@ -6,8 +6,9 @@
 
 <h1 align="center" style="margin-bottom: 0;">
   Franco Sbaffi &copy;
+  <br>
 </h1>
-<br>
+
 <p align="center">
   Personal Porfolio 2024
 </p>

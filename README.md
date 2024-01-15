@@ -4,10 +4,9 @@
 
 </div>
 
-<h1 align="center" style="margin-bottom: 0;">
-  <br>
+<p align="center" style="margin-bottom: 0;">
   Franco Sbaffi &copy;
-</h1>
+</p>
 <br>
 <p align="center">
   Personal Porfolio 2024

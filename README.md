@@ -5,8 +5,8 @@
 </div>
 
 <h1 align="center" style="margin-bottom: 0;">
-  Franco Sbaffi &copy;
   <br>
+  Franco Sbaffi &copy;
 </h1>
 <br>
 <p align="center">

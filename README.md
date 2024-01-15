@@ -14,7 +14,7 @@
 
 <div align="center">
   
-<img src="https://github.com/FrancoSbaffi/Portfolio/assets/99909205/805e942b-70e5-4d21-b4f1-93392bdf4b36" alt="Portfolio Image">
+<img src="https://github.com/FrancoSbaffi/Portfolio/assets/99909205/a1f2a47f-2de6-46ac-ae26-ae96a64c0205" alt="Portfolio Image">
   
 </div>
 

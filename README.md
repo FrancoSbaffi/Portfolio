@@ -1,4 +1,5 @@
-![icon](https://github.com/FrancoSbaffi/Portfolio/assets/99909205/679fc843-0bd3-4ef8-a42e-5df71e5ea827)<svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+<div center>
+  ![icon](https://github.com/FrancoSbaffi/Portfolio/assets/99909205/679fc843-0bd3-4ef8-a42e-5df71e5ea827)<svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="auto" height="50" rx="50" fill="black"/>
 <g clip-path="url(#clip0_345_17)">
 <circle cx="88.4" cy="88.4" r="48.4" fill="#D1D1C7"/>
@@ -12,4 +13,5 @@
 </clipPath>
 </defs>
 </svg>
+</div>
 

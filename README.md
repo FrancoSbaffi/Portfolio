@@ -20,7 +20,7 @@
   
 </div>
 
-## 🛠️ Stack
+## Stack
 
 - **HTML** - Lenguaje de marcado estándar para documentos diseñados para ser mostrados en un navegador web.
 - **CSS** - Lenguaje de estilo utilizado para describir la presentación de un documento escrito en HTML.
@@ -28,6 +28,6 @@
 - **GSAP** - Biblioteca para la creación de animaciones avanzadas en la web.
 - **Fuentes** - Utilizo varias fuentes en mis proyectos, incluyendo:
   - [**Plus Jakarta Sans**](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
-  - [**Geist**](https://geist.xyz/)
-  - [**Georgia**](https://fonts.google.com/specimen/Georgia)
+  - [**Geist**](https://vercel.com/font)
+  - [**Georgia**](https://www.myfonts.com/collections/georgia-font-microsoft-corporation)
 

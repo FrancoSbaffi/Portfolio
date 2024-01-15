@@ -4,9 +4,7 @@
 
 </div>
 
-<p align="center" style="margin-bottom: 0; font-size: 50px;">
-  Franco Sbaffi &copy;
-</p>
+# Franco Sbaffi &copy;
 
 <br>
 <p align="center">

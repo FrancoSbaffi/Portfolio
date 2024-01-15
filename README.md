@@ -6,12 +6,15 @@
 
 <h1 align="center" style="margin-bottom: 0;">
   Franco Sbaffi &copy;
-  <br>
 </h1>
 
 <p align="center">
   Personal Porfolio 2024
 </p>
 
-
+<div align="center">
+  
 <img src="![image](https://github.com/FrancoSbaffi/Portfolio/assets/99909205/805e942b-70e5-4d21-b4f1-93392bdf4b36)">
+  
+</div>
+

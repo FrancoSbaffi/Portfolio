@@ -1,6 +1,6 @@
-<div align="center">
+<div align="center" width="50px">
 
-<svg width="auto" height="30px" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+![Icono del Proyecto](https://github.com/FrancoSbaffi/Portfolio/assets/99909205/b52b3cd3-d196-4c91-9f8c-2081a7e51d38)
 
 
 </div>

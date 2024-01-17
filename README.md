@@ -16,7 +16,7 @@
 <br>
 <div align="center">
   
-<img src="https://github.com/FrancoSbaffi/Portfolio/assets/99909205/a1f2a47f-2de6-46ac-ae26-ae96a64c0205" alt="Portfolio Image" style="border-radius: 10px;">
+<img src="https://github.com/FrancoSbaffi/Portfolio/assets/99909205/a65b7f59-1296-45f9-9086-1cea4ba015f3" alt="Portfolio Image" style="border-radius: 10px;">
   
 </div>
 

@@ -66,7 +66,7 @@ const updateDockItems = () => {
       }
     }
 
-    item.style.transition = "transform 0.3s ease-in-out, margin 0.3s ease-in-out";
+    item.style.transition = "transform 0.2s ease-in-out, margin 0.2s ease-in-out";
     item.style.transform = `scale(${scale})`;
     item.style.margin = `0 ${margin}`;
   });

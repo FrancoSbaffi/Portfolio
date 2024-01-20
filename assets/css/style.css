@@ -543,6 +543,7 @@ main {
 .title-blog {
   font-family: var(--font-primary);
   color: var(--white);
+  text-transform: uppercase;
 }
 
 .span-text {
@@ -1021,7 +1022,7 @@ h2 {
 
 .contents-blog {
   background-color: var(--black-option);
-  width: max-content;
+  width: fit-content;
   margin-top: 20px;
   padding: 20px;
   border-radius: 8px;

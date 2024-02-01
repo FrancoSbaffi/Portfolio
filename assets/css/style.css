@@ -1080,7 +1080,7 @@ h2 {
   color: var(--white);
   font-family: var(--font-primary);
   font-weight: 900;
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .section-blog-text {
@@ -1216,7 +1216,7 @@ code {
 
 @media (max-width: 570px) {
   .title-blog {
-    font-size: 45px;
+    font-size: 38px;
   }
 }
 

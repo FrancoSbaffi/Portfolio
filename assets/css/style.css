@@ -57,7 +57,7 @@
   --blur: rgba(160, 160, 170, 0.2);
   --back-blur: #0000001f;
   --bg: #232323;
-  --color-about: #d1d1c7;
+  --color-about: #d2f65a;
   --line-about: #ffffff1c;
 }
 
@@ -103,6 +103,7 @@ body.dark {
   --blur: rgba(160, 160, 170, 0.2);
   --back-blur: #937f7f33;
   --bg: #f1ecec;
+  --color-about: #ff0088;
   --line-about: #0000003d;
 }
 
@@ -249,7 +250,7 @@ a {
 }
 
 .container {
-  max-width: 850px;
+  max-width: 770px;
   margin: 0 auto;
   width: 90%;
   position: relative;

@@ -57,7 +57,7 @@
   --blur: rgba(160, 160, 170, 0.2);
   --back-blur: #0000001f;
   --bg: #232323;
-  --color-about: #d2f65a;
+  --color-about: rgb(66,165,245);
   --line-about: #ffffff1c;
 }
 
@@ -103,7 +103,7 @@ body.dark {
   --blur: rgba(160, 160, 170, 0.2);
   --back-blur: #937f7f33;
   --bg: #f1ecec;
-  --color-about: #ff0088;
+  --color-about: rgb(66,165,245);
   --line-about: #0000003d;
 }
 

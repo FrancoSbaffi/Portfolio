@@ -57,7 +57,7 @@
   --blur: rgba(160, 160, 170, 0.2);
   --back-blur: #0000001f;
   --bg: #232323;
-  --color-about: rgb(66,165,245);
+  --color-about: #B4B5B7;
   --line-about: #ffffff1c;
 }
 
@@ -103,7 +103,7 @@ body.dark {
   --blur: rgba(160, 160, 170, 0.2);
   --back-blur: #937f7f33;
   --bg: #f1ecec;
-  --color-about: rgb(66,165,245);
+  --color-about: #B4B5B7;
   --line-about: #0000003d;
 }
 
@@ -1223,7 +1223,7 @@ code {
 
 @media (max-width: 425px) {
   .title-blog {
-    font-size: 30px;
+    font-size: 25px;
   }
   .written-by {
     font-size: 10px;

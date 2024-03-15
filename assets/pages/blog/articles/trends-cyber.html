@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franco Sbaffi — Website Re-design</title>
+  <link rel="icon" href="../../../img/icon.png" />
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/about.css">
+  <link rel="stylesheet" href="../../../css/writings.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body>
+
+  <!-- Bg Animation Effect Start -->
+  <div class="bg-animation-effect"></div>
+  <!-- Bg Animation Effect End -->
+
+  <!-- START DOCK -->
+
+  <div class="content-dock">
+    <div class="dock">
+      <div class="dock-item">
+        <a href="../../../../index.html" class="dock-icons">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path opacity="0.25"
+              d="M20 18.8V6.63998L13.6514 2.81501L13.6514 2.815C13.0511 2.45333 12.751 2.2725 12.4304 2.20186C12.1469 2.13938 11.8531 2.13938 11.5696 2.20186C11.249 2.2725 10.9489 2.45334 10.3486 2.81501L4 6.64001V18.8C4 19.9201 4 20.4802 4.21799 20.908C4.40973 21.2843 4.71569 21.5903 5.09202 21.782C5.51984 22 6.0799 22 7.2 22H16.8C17.9201 22 18.4802 22 18.908 21.782C19.2843 21.5903 19.5903 21.2843 19.782 20.908C20 20.4802 20 19.9201 20 18.8Z"
+              fill="currentColor"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.14251 9.5145C1.42665 9.98808 2.04091 10.1416 2.51449 9.85749L12 4.16619L21.4855 9.85749C21.9591 10.1416 22.5733 9.98808 22.8575 9.5145C23.1416 9.04092 22.9881 8.42666 22.5145 8.14251L13.029 2.45121C12.3956 2.07119 11.6044 2.07119 10.971 2.45121L1.4855 8.14251C1.01192 8.42666 0.858357 9.04092 1.14251 9.5145Z"
+              fill="currentColor"></path>
+            <path d="M9 16C9 14.3431 10.3431 13 12 13C13.6569 13 15 14.3431 15 16V22H9V16Z" fill="currentColor"></path>
+          </svg>
+          <span class="dock-item-name">Home</span>
+        </a>
+      </div>
+      <div class="dock-item">
+        <a href="../../about/about.html" class="dock-icons">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="w-6/12 transition fill-white dark:fill-neutral-600 dark:stroke-neutral-300 stroke-neutral-900">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+        <span class="dock-item-name">About</span>
+      </div>
+      <div class="dock-item">
+        <a href="../writings.html" class="dock-icons">
+          <svg viewBox="0 0 21 21" width="24px" height="24px" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M3.577 3.113c-.875 0-1.583.709-1.583 1.583V15.78a2.533 2.533 0 0 0 2.533 2.534h12.668a2.534 2.534 0 0 1-2.534-2.534V4.696c0-.875-.71-1.583-1.583-1.583h-9.5Zm6.65 5.7a.633.633 0 0 0 0 1.267h1.267a.633.633 0 1 0 0-1.267h-1.267Zm-.633-1.9a.633.633 0 0 1 .633-.634h1.267a.633.633 0 1 1 0 1.267h-1.267a.633.633 0 0 1-.633-.633Zm-4.433 4.433a.634.634 0 0 0 0 1.267h6.333a.633.633 0 1 0 0-1.267H5.161Zm-.634 3.167a.633.633 0 0 1 .634-.633h6.333a.633.633 0 0 1 0 1.267H5.161a.633.633 0 0 1-.634-.634Zm.634-8.234a.633.633 0 0 0-.634.634v2.533c0 .35.284.634.634.634h2.533a.633.633 0 0 0 .633-.634V6.913a.633.633 0 0 0-.633-.634H5.161Z"
+              fill="currentColor"></path>
+            <path d="M15.928 6.28h1.583a.95.95 0 0 1 .95.95v8.55a1.267 1.267 0 0 1-2.533 0v-9.5Z" fill="#000"></path>
+          </svg>
+          <span class="dock-item-name">Writings</span>
+        </a>
+      </div>
+      <div class="dock-item">
+        <a href="mailto:sbafficloud@gmail.com" class="dock-icons">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path opacity="0.25"
+              d="M1 6C1 4.34315 2.34315 3 4 3H20C21.6569 3 23 4.34315 23 6V18C23 19.6569 21.6569 21 20 21H4C2.34315 21 1 19.6569 1 18V6Z"
+              fill="currentColor"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.23177 7.35981C5.58534 6.93553 6.2159 6.87821 6.64018 7.23177L11.3598 11.1648C11.7307 11.4738 12.2693 11.4738 12.6402 11.1648L17.3598 7.23177C17.7841 6.87821 18.4147 6.93553 18.7682 7.35981C19.1218 7.78409 19.0645 8.41465 18.6402 8.76822L13.9205 12.7012C12.808 13.6284 11.192 13.6284 10.0794 12.7012L5.35981 8.76822C4.93553 8.41465 4.87821 7.78409 5.23177 7.35981Z"
+              fill="currentColor"></path>
+          </svg>
+          <span class="dock-item-name">Contact</span>
+        </a>
+      </div>
+      <div class="dock-item dock-icons" id="toggleThemeButton">
+        <a href="#" class="dock-icons">
+          <ion-icon name="moon-sharp"></ion-icon>
+          <span class="dock-item-name">Theme</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- END DOCK -->
+
+  <!-- START NAVBAR -->
+
+  <main class="container content">
+    <article class="sec-padding section top-content">
+      <p class="date-blog">
+        March 15, 2024
+      </p>
+      <p class="title-blog">
+        TRENDS IN CYBER SECURITY 2024
+      </p>
+      <p class="written-by">
+        WRITTEN BY &nbsp;<img src="../../../img/Me.jpg" alt="" class="img-written">&nbsp;FRANCO, SECURITY ENGINEER.
+      </p>
+      <br>
+      <br>
+      <br>
+      <hr class="divide-blog">
+      <p class="sub-title-blog">
+        2024 will be a year of changes and new trends in the field of cybersecurity. Cyber threats are increasing in number and sophistication, so understanding and being prepared for future trends is crucial for all businesses.
+      </p>
+      <br>
+      <div class="contents-blog">
+        <p class="content-blog-title">
+          QUICK NAVIGATION
+        </p>
+        <p class="navigation" data-target="#section-inspiration">Zero Trust</p>
+        <p class="navigation" data-target="#section-colors-typography">AI & Machine Learning</p>
+        <p class="navigation" data-target="#section-logos-assets">IoT Security</p>
+        <p class="navigation" data-target="#section-designing-website">Quantum computing</p>
+        <p class="navigation" data-target="#section-development">Cloud Security</p>
+      </div>
+
+      <section id="section-inspiration">
+        <p class="part-blog">
+          PART: I
+        </p>
+        <p class="title-section-blog">
+          ZERO TRUST
+        </p>
+        <p class="section-blog-text">
+          Let's imagine a castle and a moat. If we are inside the castle, threats remain outside, since the perimeter outside the moat remains protected. If we transfer this metaphor to a digital environment, the problem arises when a user assumes that, with the correct access credentials, they can move freely through the system and trust that nothing will happen.
+          <br>
+          <br>
+          This is the most common scenario: As much as organizations erect many security defenses, as soon as a gullible user clicks on a malicious link or attachment, they allow cybercriminals to compromise systems. In fact, it's the reason why phishing and ransomware are so harmful.
+          <br>
+          <br>
+          <span class="cloud-infra">The zero trust model restricts access to the network only to those people who need it</span>. Based on contextual awareness, access is granted to authorized users using patterns based on identity, time, and device. Default access is removed. Now everything must pass security protocols such as access control steps and user identity verification.
+        </p>
+      </section>
+
+      <section id="section-colors-typography">
+        <p class="part-blog">
+          PART: II
+        </p>
+        <p class="title-section-blog">
+          AI & ML
+        </p>
+        <p class="section-blog-text">
+          AI and ML will play a critical role in the battle for cybersecurity. Its advanced data analysis capabilities are already being used to <span class="cloud-infra">identify and predict threats</span>, which improves early detection systems and can better respond to new dangers.
+          <br>
+          <br>
+          This will be the year we see AI algorithms provide real-time threat analysis, enabling faster and more accurate responses. Additionally, the ML will adapt and update cybersecurity protocols autonomously, reducing dependence on manual updates.
+        </p>
+      </section>
+
+      <section id="section-logos-assets">
+        <p class="part-blog">
+          PART: III
+        </p>
+        <p class="title-section-blog">
+          IoT Security
+        </p>
+        <p class="section-blog-text">
+          The IoT is one of the booming technologies in recent years, and its growth will continue to increase thanks to the greater use of interconnected devices. However, their diversity and ubiquity make them attractive targets for cybercriminals.
+        </p>
+        <p class="section-blog-text">
+          Therefore, this year an approach will be taken to improve device security through the <span class="cloud-infra">creation of standardized and more robust security protocols</span>. We're talking about universal encryption standards and mandatory security certifications, as well as monitoring for unusual patterns.
+        </p>
+        <p class="section-blog-text">
+          In addition, more focus will be placed on training users when using these devices so that they are more aware of the potential risks they entail and can apply best practices.
+        </p>
+      </section>
+
+      <section id="section-designing-website">
+        <p class="part-blog">
+          PART: IV
+        </p>
+        <p class="title-section-blog">
+          QUANTUM COMPUTING
+        </p>
+        <p class="section-blog-text">
+          In the coming years, its ability to process data at unprecedented speeds to solve complex problems in less time will change the way we think about things.
+          <br>
+          <br>
+          Its capabilities will improve encryption methods, develop more sophisticated algorithms to <span class="cloud-infra">detect cyber threats, and efficiently manage large-scale data operations</span>. However, it will also pose great challenges due to its ability to break traditional encryption methods, which could leave many current security systems vulnerable.
+        </p>
+        <p class="section-blog-text">
+          Therefore, the 2024 trend in cybersecurity will focus on updating current encryption methods and preparing systems to be resistant to the advanced capabilities of quantum computing.
+        </p>
+      </section>
+
+      <section id="section-development">
+        <p class="part-blog">
+          PART: V
+        </p>
+        <p class="title-section-blog">
+          CLOUD SECURITY
+        </p>
+        <p class="section-blog-text">
+          Penetration tests are simulated cyberattacks that attack a company's computer system to check if there are exploitable vulnerabilities. This helps augment the application firewall (WAF), <span class="cloud-infra">as well as adjust security policies and patch vulnerabilities.</span>
+          <br>
+          <br>
+          Hackers exploit vulnerabilities in companies' systems through automated tools that find these weaknesses. Therefore, if companies periodically perform penetration tests, as well as hacking simulations to find security gaps, the security of their systems is improved and data breaches are prevented.
+        </p>
+        <button onclick="scrollToTop()" id="btnToTop" title="Scroll to Top" class="button-top">BACK TO TOP</button>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../js/script.js"></script>
+</body>
+
+</html>

@@ -10,20 +10,21 @@
   --second-color: #342499;
   --third-color: #231866;
   --fourth-color: #110C33;
-  --fifth-color: #999999;
-  --sixth-color: #ffffff5e;
+  --fifth-color: #a4b1cd;
+  --sixth-color: #596274;
   --seventh-color: #c5bcbc81;
   --yellow: #CCFF00;
-  --back: #2f2d2d;
-  --white: #ffffff;
+  --back: #1a2332;
+  --white: #cad2e2;
   --gray: #ffffff;
-  --black: #1b1b1b;
+  --black: #141d2b;
   --black-option: #31313173;
-  --hover-wr: #2d2a2a73;
+  --hover-wr: #111927;
   --blur: rgba(160, 160, 170, 0.2);
-  --back-blur: #0000001f;
-  --bg: #232323;
-  --code-wr: #ff006d;
+  --back-blur: #273a545c;
+  --bg: #1b2533;
+  --color-about: #9fef00;
+  --line-about: #ffffff1c;
 }
 
 body.dark {
@@ -46,8 +47,8 @@ body.dark {
   --blur: rgba(160, 160, 170, 0.2);
   --back-blur: #937f7f33;
   --bg: #f1ecec;
+  --color-about: #B4B5B7;
   --line-about: #0000003d;
-  --code-wr: #ff7c00;
 }
 
 .title-wr_section {
@@ -123,6 +124,44 @@ body.dark {
   border-radius: 5px;
   font-family: var(--font-primary);
   font-weight: 700;
+}
+
+.content-wr-2024{
+  margin-top: 20px;
+}
+
+.span-writings{
+  color: var(--white);
+  font-family: var(--font-fourth);
+  font-size: 23px;
+}
+
+.date-text-wr {
+  font-family: var(--font-third);
+  font-size: 12px;
+  margin-top: 21px;
+  padding-right: 8px;
+  color: var(--fifth-color);
+}
+
+.text-wr {
+  font-family: var(--font-third);
+  font-size: 15px;
+  margin-top: 20px;
+  color: var(--white);
+}
+
+.text-wr:hover {
+  color: var(--color-about);
+  transition: 0.3s all;
+}
+
+.month-text-wr{
+  font-family: var(--font-third);
+  font-size: 12px;
+  margin-top: 21px;
+  padding-left: 8px;
+  color: var(--fifth-color);
 }
 
 @media (max-width: 768px) {

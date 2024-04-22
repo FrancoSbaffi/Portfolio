@@ -1,6 +1,6 @@
 <div align="center">
   
-![Icono del Proyecto](https://github.com/FrancoSbaffi/Portfolio/assets/99909205/30fc803e-aabb-4af6-84e1-33fcf6e60ad8)
+![Icono del Proyecto]((https://github.com/FrancoSbaffi/Portfolio/assets/99909205/113453a0-d755-431b-8411-002266af30dc))
 
 
 

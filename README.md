@@ -2,8 +2,6 @@
   
 ![Icono del Proyecto](https://github.com/FrancoSbaffi/Portfolio/assets/99909205/30fc803e-aabb-4af6-84e1-33fcf6e60ad8)
 
-
-
 </div>
 
 <h3 align="center" style="margin-bottom: 0; font-size: 50px;">
@@ -16,7 +14,7 @@
 <br>
 <div align="center">
   
-<img src="https://github.com/FrancoSbaffi/Portfolio/assets/99909205/a65b7f59-1296-45f9-9086-1cea4ba015f3" alt="Portfolio Image" style="border-radius: 10px;">
+<img src="https://github.com/FrancoSbaffi/Portfolio/assets/99909205/7da2ca64-550d-4401-ad99-35ab5178ec1a" alt="Portfolio Image" style="border-radius: 10px;">
   
 </div>
 

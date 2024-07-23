@@ -1,31 +1,66 @@
 
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200;6..72,300;6..72,400;6..72,500;6..72,600&display=swap");
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url(../font/Geist-Black.otf);
+  src: url(../font/Geist-Black.woff2);
+  src: url(../font/Geist-Bold.otf);
+  src: url(../font/Geist-Bold.woff2);
+  src: url(../font/Geist-Light.otf);
+  src: url(../font/Geist-Light.woff2);
+  src: url(../font/Geist-Medium.otf);
+  src: url(../font/Geist-Medium.woff2);
+  src: url(../font/Geist-Regular.otf);
+  src: url(../font/Geist-Regular.woff2);
+  src: url(../font/Geist-SemiBold.otf);
+  src: url(../font/Geist-SemiBold.woff2);
+  src: url(../font/Geist-Thin.otf);
+  src: url(../font/Geist-Thin.woff2);
+  src: url(../font/Geist-UltraBlack.otf);
+  src: url(../font/Geist-UltraBlack.woff2);
+  src: url(../font/Geist-UltraLight.otf);
+  src: url(../font/Geist-UltraLight.woff2);
+}
+
+@font-face {
+  font-family: "Georgia,sans-serif";
+  src: url(../font/georgia.woff);
+  src: url(../font/georgiab.woff);
+  src: url(../font/georgiai.woff);
+  src: url(../font/georgiaz.woff);
+}
+
 /* VARIABLES */
 
 :root {
   --font-primary: "Plus Jakarta Sans", sans-serif;
   --font-secondary: "Newsreader", sans-serif;
   --font-third: "Geist Mono", sans-serif;
-  --font-fourth: "Georgia,sans-serif";
-  --main-color: #573CFF;
-  --second-color: #342499;
+  --font-fourth: "Georgia", sans-serif;
+  --main-color: #31313173;
+  --second-color: #344299;
   --third-color: #231866;
-  --fourth-color: #110C33;
-  --fifth-color: #a4b1cd;
-  --sixth-color: #596274;
-  --seventh-color: #c5bcbc81;
-  --yellow: #CCFF00;
-  --back: #1a2332;
-  --white: #cad2e2;
+  --fourth-color: #110c33;
+  --fifth-color: #999999;
+  --sixth-color: #99999999;
+  --seventh-color: #b5cbc681;
+  --yellow: #fcff00;
+  --back: #31313173;
+  --white: #ffffff;
   --gray: #ffffff;
-  --black: #141d2b;
-  --black-option: #31313173;
-  --hover-wr: #111927;
+  --black: #181b18;
+  --black-option: #2e3f5854;
+  --hover-wr: #232323;
   --blur: rgba(160, 160, 170, 0.2);
-  --back-blur: #273a545c;
-  --bg: #1b2533;
-  --color-about: #9fef00;
+  --back-blur: #31313173;
+  --bg: #232323;
+  --color-about: #d1d1c7;
   --line-about: #ffffff1c;
 }
+
 
 body.dark {
   --font-primary: "Plus Jakarta Sans", sans-serif;
@@ -131,8 +166,10 @@ body.dark {
 }
 
 .span-writings{
-  color: var(--white);
+  font-style: italic;
+  font-weight: 600;
   font-family: var(--font-fourth);
+  color: var(--white);
   font-size: 23px;
 }
 

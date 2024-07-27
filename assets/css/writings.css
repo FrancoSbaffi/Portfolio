@@ -169,7 +169,7 @@ body.dark {
   font-style: italic;
   font-weight: 600;
   font-family: var(--font-fourth);
-  color: var(--white);
+  color: var(--color-about);
   font-size: 23px;
 }
 

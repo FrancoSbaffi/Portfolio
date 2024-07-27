@@ -1215,6 +1215,13 @@ code {
   color: var(--fifth-color);
 }
 
+.italic {
+  color: var(--color-about);
+  font-family: var(--font-fourth);
+  font-weight: 500;
+  font-style: italic;
+}
+
 /* QUERIES BLOG */
 
 @media (max-width: 570px) {
@@ -1234,7 +1241,7 @@ code {
     width: 40px;
   }
   .title-section-blog {
-    font-size: 45px;
+    font-size: 35px;
   }
 }
 
@@ -1246,7 +1253,7 @@ code {
 
 @media (max-width: 360px) {
   .title-section-blog {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
@@ -1264,6 +1271,8 @@ code {
 .about-intro-option {
   color: var(--white);
   font-family: var(--font-fourth);
+  font-weight: 600;
+  font-style: italic;
 }
 
 .img-about-me {
@@ -1290,6 +1299,8 @@ code {
   font-family: var(--font-fourth);
   color: var(--color-about);
   text-decoration: underline;
+  font-style: italic;
+  font-weight: 600;
 }
 
 #cards {

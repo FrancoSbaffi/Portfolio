@@ -51,12 +51,12 @@
   --back: #31313173;
   --white: #ffffff;
   --gray: #ffffff;
-  --black: #181b18;
+  --black: #1d1d1d;
   --black-option: #2e3f5854;
   --hover-wr: #232323;
   --blur: rgba(160, 160, 170, 0.2);
   --back-blur: #31313173;
-  --bg: #232323;
+  --bg: #292727;
   --color-about: #d1d1c7;
   --line-about: #ffffff1c;
 }
@@ -441,7 +441,7 @@ i {
 }
 
 .img-me{
-  width: 75px;
+  width: 90px;
   border-radius: 50%;
   background-color: var(--back-blur);
   backdrop-filter: blur(5px);
@@ -606,8 +606,7 @@ main {
   color: var(--white);
   margin-top: 20px;
   font-family: var(--font-primary);
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 13px;
   width: fit-content;
   background-color: var(--back-blur);
   backdrop-filter: blur(5px);

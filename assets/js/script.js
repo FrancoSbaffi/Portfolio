@@ -30,11 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
   showSections(0);
 });
 
-// 3D
-
-
-
-
 // DOCK
 
 const dockItems = document.querySelectorAll(".dock-item");
@@ -278,24 +273,7 @@ function copyCode(index) {
   window.getSelection().removeAllRanges();
 }
 
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-});
 
-document.addEventListener('keydown', function(e) {
-  // F12
-  if (e.keyCode == 123) {
-      e.preventDefault();
-  }
-
-  if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) {
-      e.preventDefault();
-  }
-
-  if (e.ctrlKey && e.keyCode == 85) {
-      e.preventDefault();
-  }
-});
 
 
 
